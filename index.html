@@ -3,28 +3,75 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
-    <link rel="icon" type="image/x-icon" href="https://w7.pngwing.com/pngs/479/691/png-transparent-coin-flipping-coin-flipper-android-flippers-game-logo-sign-thumbnail.png">
+    <!-- website logo -->
+    <link rel="icon" type="image/x-icon" href="./Assets/logo.png" />
     <title>Flip a coin</title>
+    <!-- Tailwind css -->
+    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
-    <img src="./img/himanshu logo.jpg" alt="logo">
-    <div class="container">
-      <div class="coin" id="coin">
-        <div class="heads">
-          <img src="./img/coin heads.png" />
+  <body
+    class="sm:bg-gradient-to-r bg-gradient-to-b from-sky-300 to-indigo-300 flex justify-center items-center w-full h-screen"
+  >
+    <div class="flex flex-col items-center">
+      <!-- website logo -->
+      <div
+        class="absolute sm:top-8 sm:left-8 top-4 left-4 flex sm:flex-col sm:items-center items-center"
+      >
+        <img
+          class="sm:w-20 w-12 rounded-full"
+          src="./Assets/logo.png"
+          alt="logo"
+        />
+        <h1 class="text-xl sm:mb-6 ml-3 sm:mr-0 font-semibold">
+          Flip a coin online
+        </h1>
+      </div>
+      <!-- Number of heads and tails -->
+      <div class="flex text-2xl mb-12">
+        <h1 class="mr-6">Heads: <span id="number_of_heads">0</span></h1>
+        <h1>Tails: <span id="number_of_tails">0</span></h1>
+      </div>
+      <!-- Coin -->
+      <div
+        onclick="toss()"
+        class="w-[230px] h-[230px] cursor-pointer relative text-3xl"
+        id="coin"
+      >
+        <div class="heads absolute w-full h-full">
+          <!-- <img class="w-44" src="./Assets/coin heads.png" /> -->
+          <span
+            class="bg-pink-500 w-full h-full rounded-full flex justify-center items-center text-white"
+          >
+            <span
+              class="w-[85%] h-[85%] rounded-full border border-[2px] border-dotted border-gray-100 flex justify-center items-center"
+              >HEADS</span
+            >
+          </span>
         </div>
-        <div class="tails">
-          <img src="./img/coin tails.png" />
+        <div class="tails absolute w-full h-full">
+          <!-- <img class="w-44" src="./Assets/coin tails.png" /> -->
+          <span
+            class="bg-gray-500 w-full h-full rounded-full flex justify-center items-center text-white"
+          >
+            <span
+              class="w-[85%] h-[85%] rounded-full border border-[2px] border-dotted border-gray-100 flex justify-center items-center"
+              >TAILS</span
+            >
+          </span>
         </div>
       </div>
       <!-- Board -->
-      <div class="board">
+      <div class="flex justify-center h-8 my-4 text-green-800 text-3xl">
         <p id="result"></p>
       </div>
-      <div class="buttons">
-        <button id="flip-button">Flip Coin</button>
-      </div>
+      <button
+        id="flip_button"
+        class="px-6 py-[10px] bg-pink-500 hover:bg-pink-600 active:scale-[1.05] duration-100 border border-1 border-transparent hover:border-white scale-100 rounded text-white flex justify-center text-xl"
+      >
+        Flip the Coin!
+      </button>
     </div>
 
     <script src="./script.js"></script>
