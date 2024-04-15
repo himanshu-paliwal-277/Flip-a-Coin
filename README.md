@@ -5,6 +5,7 @@ Welcome to the repository of the Flip a Coin website! This simple web site offer
 ## Tech Used
 
 - HTML
+- CSS
 - Tailwind CSS
 - Vanilla JavaScript
 
