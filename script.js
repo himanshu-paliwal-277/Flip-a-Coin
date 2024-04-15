@@ -16,16 +16,16 @@ function toss() {
   coin_flip_sound.play();
   let i = Math.floor(Math.random() * 2);
   coin.style.animation = "none";
-  if (i) {
+  if (i === 0) {
     setTimeout(function () {
-      coin.style.animation = "spin-heads 4s forwards";
+      coin.style.animation = "spin-heads 3s forwards linear";
     }, 100);
-    setTimeout(Heads, 4000);
+    setTimeout(Heads, 3100);
   } else {
     setTimeout(function () {
-      coin.style.animation = "spin-tails 4s forwards";
+      coin.style.animation = "spin-tails 3s forwards linear";
     }, 100);
-    setTimeout(Tails, 4000);
+    setTimeout(Tails, 3100);
   }
   disableButton();
 }
@@ -34,7 +34,7 @@ function disableButton() {
   flip_button.disabled = true;
   setTimeout(function () {
     flip_button.disabled = false;
-  }, 4000);
+  }, 3100);
 }
 
 // Funtion when heads comes
