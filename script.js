@@ -7,10 +7,10 @@ let coin_flip_sound = new Audio("./Assets/coin_flip_sound.mp3");
 let heads_count = 0;
 let tails_count = 0;
 
-// Flip coin logic
+// Flip coin Button - when clicked call toss function
 flip_button.addEventListener("click", toss);
 
-// Flip coin function
+// toss a coin function
 function toss() {
   result.innerText = "";
   coin_flip_sound.play();
@@ -37,22 +37,20 @@ function disableButton() {
   }, 3100);
 }
 
-// Funtion when heads comes
+// Execute Function when heads comes
 function Heads() {
   result.innerText = "Heads";
   heads_count++;
   setTimeout(() => {
     number_of_heads.innerText = heads_count;
-    // number_of_tails.innerText = tails_count;
   }, 200);
 }
 
-// Funtion when tails comes
+// Execute Function when tails comes
 function Tails() {
   result.innerText = "Tails";
   tails_count++;
   setTimeout(() => {
-    // number_of_heads.innerText = heads_count;
     number_of_tails.innerText = tails_count;
   }, 200);
 }
